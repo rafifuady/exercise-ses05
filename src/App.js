@@ -7,6 +7,13 @@ import Card from './atom/Card';
 let App = () => {
   const [number, setNumber] = useState(0)
   const [message, setMessage] = useState("")
+
+  // const [state, setState] = useState({
+  //   number: 0,
+  //   renderErrorComponent: false,
+  //   errorMessage: 'error'
+  // })
+
   let increment = () => {
     setNumber(number + 1)
     setMessage("")
@@ -18,6 +25,14 @@ let App = () => {
             setMessage("Sudah mencapai maximum")
           }
   }
+
+  const [state, setState] = useState({
+    number: 0,
+    renderErrorComponent: false,
+    errorMessage: 'error'
+  })
+  
+
   return (
     <div className="App">
          {/* <Card showNum={this.state.number} /> */}
