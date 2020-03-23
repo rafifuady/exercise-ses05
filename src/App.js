@@ -1,9 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; 
-import { Provider, useDispatch, useSelector  } from "react-redux";
+import { Provider } from "react-redux";
 
 import './App.css';
 import Count from './pages/Count';
+import Starwars from './pages/starWars'
 
 import reduxStore from "./redux/store";
 
@@ -11,14 +12,13 @@ import reduxStore from "./redux/store";
 class App extends React.Component {
   
   render(){
-    const isRed = true
-    const { classes } = this.props
     
     return (
       <Provider store={reduxStore}>
         <Router>
           <Switch>
             <Route path="/count" component={Count} />
+            <Route path="/starwars" component={Starwars} />
             <Route component={() => <div>ErrorPage</div>} />
           </Switch>
         </Router>
@@ -26,7 +26,6 @@ class App extends React.Component {
     );
   }
 }
-
 
 export default App
 // let increment = () => {

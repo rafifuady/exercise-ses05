@@ -41,17 +41,5 @@ const Count = () => {
   )
 }
 
-const mapStateToProps = (state) => {
-  return {
-    num: state.count,
-    user: state.user
-  }
-}
-
-const mapDispatchToProps = {
-  incrementAction,
-  decrementAction,
-  changeName
-}
 
 export default Count
