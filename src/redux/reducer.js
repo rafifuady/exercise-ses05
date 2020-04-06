@@ -93,7 +93,7 @@ const app = (state = {...appState}, action) => {
                     ...state.selectedProfile,
                     urlDetail: action.payload
                 }
-                }
+            }
         default:
             return state
     }

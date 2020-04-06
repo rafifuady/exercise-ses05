@@ -17,6 +17,7 @@ class App extends React.Component {
       <Provider store={reduxStore}>
         <Router>
           <Switch>
+            <Route path="/" component={Count} />
             <Route path="/count" component={Count} />
             <Route path="/starwars" component={Starwars} />
             <Route component={() => <div>ErrorPage</div>} />

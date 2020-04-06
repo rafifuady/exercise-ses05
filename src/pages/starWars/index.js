@@ -18,7 +18,7 @@ class StarWars extends React.Component {
         return(
             <React.Fragment>
                 <div>
-                    {/* Detail {loadingProfile ? '...Loading': selectedProfile.name} */}
+                    Detail {loadingProfile ? '...Loading': selectedProfile}
                 </div>
                 <table class="table">
                                     <thead>
